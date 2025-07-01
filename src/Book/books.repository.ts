@@ -41,6 +41,11 @@ export class BooksRepository {
     });
   }
 
+  async findAll(): Promise<Prisma.BookUncheckedCreateInput | null> {
+    return await this.prisma.book.findUnique({
+    });
+  }  
+
   async findById(id: string): Promise<Prisma.BookUncheckedCreateInput | null> {
     return await this.prisma.book.findUnique({
       where: {
