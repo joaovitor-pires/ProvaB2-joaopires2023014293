@@ -15,7 +15,7 @@ const bodyValidationPipe = new ZodValidationPipe(createBookBodySchema);
 type CreateBookBodySchema = z.infer<typeof createBookBodySchema>;
 
 @Controller('/books')
-export class CreateProductController {
+export class CreateBookController {
   constructor(private createBook: CreateBookService) {}
 
   @Post()
