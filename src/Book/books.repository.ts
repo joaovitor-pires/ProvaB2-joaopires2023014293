@@ -42,7 +42,7 @@ export class BooksRepository {
   }
 
   async findAll(): Promise<Prisma.BookUncheckedCreateInput | null> {
-    return await this.prisma.book.findUnique({
+    return await this.prisma.book.findMany({
     });
   }  
 
